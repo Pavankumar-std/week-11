@@ -1,1 +1,1 @@
-# week-11
+Run `npm install`, configure `.env`, then `npm run dev`. Routes: GET /api/health, POST /api/auth/register, POST /api/auth/login, GET /api/jobs, POST /api/jobs (recruiter/admin), POST /api/jobs/:id/apply (candidate), GET /api/me. JSON persistence is for local demonstration only.

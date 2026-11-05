@@ -1,0 +1,13 @@
+WEEK 11 FINAL CHECKLIST
+[ ] Merge/reconcile this companion package with actual Week 10 source
+[ ] Verify candidate, recruiter and admin dashboards
+[ ] Replace JSON demo store with managed database for production
+[ ] Deploy frontend and backend; configure exact CORS origin and secrets
+[ ] Verify endpoints in Postman and save collection run
+[ ] Capture 12 genuine screenshots
+[ ] Run Lighthouse and record actual score
+[ ] Record API response timings
+[ ] Fill Before/After comparison with measured evidence
+[ ] Record 5–8 minute demo video
+[ ] Push code to GitHub; ensure .env is not committed
+[ ] Add frontend URL, backend URL, GitHub URL and Postman link

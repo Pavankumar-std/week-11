@@ -1,0 +1,96 @@
+{
+  "info": {
+    "name": "DG Interns Hub Week 11 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000"
+    },
+    {
+      "key": "token",
+      "value": ""
+    },
+    {
+      "key": "jobId",
+      "value": "replace-with-real-job-id"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health check",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/health"
+      }
+    },
+    {
+      "name": "Register candidate",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/auth/register",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Demo Candidate\",\n  \"email\": \"candidate@example.com\",\n  \"password\": \"DemoPass123\",\n  \"role\": \"candidate\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/auth/login",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"candidate@example.com\",\n  \"password\": \"DemoPass123\"\n}"
+        }
+      }
+    },
+    {
+      "name": "List jobs with pagination",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/jobs?page=1&limit=5&q=developer"
+      }
+    },
+    {
+      "name": "Current user",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/me",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Apply to job",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/api/jobs/{{jobId}}/apply",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ]
+      }
+    }
+  ]
+}
